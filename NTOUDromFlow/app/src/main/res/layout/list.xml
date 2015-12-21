@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:stretchColumns="*"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:text="@string/IP"
+            android:padding="3dp"
+            android:gravity="center"
+            android:id="@+id/IPtextView"
+            android:textColor="@color/primary_text_default_material_light" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:text="@string/SUM"
+            android:padding="3dp"
+            android:gravity="center"
+            android:id="@+id/SUMtextView"
+            android:textColor="@color/primary_text_default_material_light" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:text="@string/IN"
+            android:padding="3dp"
+            android:gravity="center"
+            android:id="@+id/INtextView"
+            android:textSize="12dp"
+            android:textColor="@color/primary_text_default_material_light" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:text="@string/OUT"
+            android:padding="3dp"
+            android:gravity="center"
+            android:id="@+id/OUTtextView"
+            android:textSize="12dp"
+            android:textColor="@color/primary_text_default_material_light" />
+    </TableRow>
+
+</TableLayout>

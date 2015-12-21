@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">海大流量</string>
+    <string name="IN">下載 (Mb)</string>
+    <string name="IP">IP 位置</string>
+    <string name="OUT">上傳 (Mb)</string>
+    <string name="SUM">總和 (Mb)</string>
+    <string name="Loading">載入中…</string>
+    <string name="Wait">正在取得資料，請稍候......</string>
+    <string name="Error">發生錯誤</string>
+    <string name="Error_TimeOut">連線逾時</string>
+    <string name="Ok">好</string>
+    <string name="Retry">重試</string>
+    <string name="enterIP">請輸入您的  IP 位置</string>
+    <string name="title_activity_settings">設定</string>
+    <string name="Refresh">重新整理</string>
+    <string name="Error_HTTP">無法連線至伺服器</string>
+    <string name="Error_Other">取得資料時發生未知的錯誤</string>
+    <string name="No_Warning">不提醒</string>
+    <string name="Warning">您已使用流量約 %1$.2f MB，尚有約 %2$.2f 可使用</string>
+    <string name="Warning_max">您已用完本日流量</string>
+    <string name="Flow_above">當流量大於</string>
+    <string name="Warning_me">時，警告我</string>
+</resources>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">NTOU DromFlow</string>
+    <string name="IP">IP address</string>
+    <string name="SUM">Total (Mb)</string>
+    <string name="IN">Download (Mb)</string>
+    <string name="OUT">Upload (Mb)</string>
+    <string name="Loading">Loading…</string>
+    <string name="Wait">Fetching data, please wait......</string>
+    <string name="Error">Error</string>
+    <string name="Error_TimeOut">connection time out.</string>
+    <string name="Ok">OK</string>
+    <string name="Retry">Retry</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="enterIP">Please enter your IP address.</string>
+    <string name="Refresh">Refresh</string>
+    <string name="Error_HTTP">Unable to connect to server.</string>
+    <string name="Error_Other">An unknown error occurred while fetching data.</string>
+    <string name="Warning_max">You have run out of the daily flow.</string>
+    <string name="No_Warning">don\'t notify</string>
+    <string name="Warning">You have used about %1$.2f MB, %2$.2f MB remaining.</string>
+    <string name="Flow_above">When the flow is greater than</string>
+    <string name="Warning_me">Warning me.</string>
+</resources>
