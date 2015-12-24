@@ -11,7 +11,7 @@
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
@@ -20,7 +20,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.ntou.haohao.ntoudromflow.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,18 +28,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.ntou.haohao.ntoudromflow.set"
-            android:label="@string/title_activity_settings"></activity>
+            android:name=".set"
+            android:label="@string/title_activity_settings" />
 
         <service
-            android:name="edu.ntou.haohao.ntoudromflow.notificationService"
+            android:name=".notificationService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
-        <receiver android:name="edu.ntou.haohao.ntoudromflow.bootUpReceiver" >
+        <receiver android:name=".bootUpReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
+        </receiver>
+
+        <receiver android:name=".alarmReceiver">
+            <intent-filter>
+                <action android:name="check_dromflow" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".DromflowAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/dromflow_app_widget_info" />
         </receiver>
     </application>
 

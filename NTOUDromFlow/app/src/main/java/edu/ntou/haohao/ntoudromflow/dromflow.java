@@ -28,7 +28,7 @@ public class dromflow {
         Document xmlDoc;
         try {
 
-            xmlDoc = Jsoup.connect(url).timeout(3000).get();
+            xmlDoc = Jsoup.connect(url).timeout(10000).get();
         }
         catch (IOException e) {
             throw e;

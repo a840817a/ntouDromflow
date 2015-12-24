@@ -20,5 +20,7 @@
     <string name="Warning">您已使用流量約 %1$.2f MB，尚有約 %2$.2f 可使用</string>
     <string name="Warning_max">您已用完本日流量</string>
     <string name="Flow_above">當流量大於</string>
-    <string name="Warning_me">時，警告我</string>
+    <string name="Warning_me">時，提醒我</string>
+    <string name="No_Data">沒有資料</string>
+    <string name="Error_Widget">無法取得資料\n最後更新：</string>
 </resources>

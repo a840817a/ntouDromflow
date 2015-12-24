@@ -3,6 +3,8 @@ package edu.ntou.haohao.ntoudromflow;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -22,6 +24,7 @@ import org.jsoup.HttpStatusException;
 
 import java.io.IOException;
 import java.net.SocketTimeoutException;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -102,9 +105,21 @@ public class MainActivity extends AppCompatActivity {
             editor.putInt("userNO2", userNO2);
             editor.putInt("warnNO", warnNO);
             editor.commit();
-            findIP();
+            if (mylist != null)
+                findIP();
+
+            AppWidgetManager widgetManager = AppWidgetManager.getInstance(this);
+            ComponentName widgetComponent = new ComponentName(this, DromflowAppWidget.class);
+            int[] widgetIds = widgetManager.getAppWidgetIds(widgetComponent);
+            Intent update = new Intent(this, DromflowAppWidget.class);
+            update.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, widgetIds);
+            update.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+            sendBroadcast(update);
 
             Intent intent = new Intent(this,notificationService.class);
+            Bundle sBundle = new Bundle();
+            sBundle.putBoolean("new", true);
+            intent.putExtras(sBundle);
             startService(intent);
         }
     }
@@ -126,10 +141,16 @@ public class MainActivity extends AppCompatActivity {
                     });
                     retry = false;
                 } catch (SocketTimeoutException e) {
+                    e.printStackTrace();
                     showError(R.string.Error_TimeOut);
                 } catch (HttpStatusException e) {
+                        e.printStackTrace();
+                        showError(R.string.Error_HTTP);
+                } catch (UnknownHostException e) {
+                    e.printStackTrace();
                     showError(R.string.Error_HTTP);
                 } catch (IOException e) {
+                    e.printStackTrace();
                     showError(R.string.Error_Other);
                 }
                 finally {

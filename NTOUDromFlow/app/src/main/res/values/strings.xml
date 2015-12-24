@@ -14,10 +14,12 @@
     <string name="enterIP">Please enter your IP address.</string>
     <string name="Refresh">Refresh</string>
     <string name="Error_HTTP">Unable to connect to server.</string>
-    <string name="Error_Other">An unknown error occurred while fetching data.</string>
-    <string name="Warning_max">You have run out of the daily flow.</string>
+    <string name="Error_Other">Unknown error occurred while fetching data.</string>
+    <string name="Warning_max">You have overfulfilled the quota today.</string>
     <string name="No_Warning">don\'t notify</string>
-    <string name="Warning">You have used about %1$.2f MB, %2$.2f MB remaining.</string>
-    <string name="Flow_above">When the flow is greater than</string>
-    <string name="Warning_me">Warning me.</string>
+    <string name="Warning">About %1$.2f MB have been used, %2$.2f MB remaining.</string>
+    <string name="Flow_above">When I\'ve used greater than</string>
+    <string name="Warning_me">of daily quota,\nnotice me.</string>
+    <string name="Error_Widget">Unable to get data\nlast update:</string>
+    <string name="No_Data">No data</string>
 </resources>
